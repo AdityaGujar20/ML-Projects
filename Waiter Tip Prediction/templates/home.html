@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waiter Tip Prediction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        color: #333;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="radio"] {
+        margin-bottom: 10px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Waiter Tip Prediction</h1>
+    <br />
+    <hr />
+    <div>
+      <form action="/predict" method="POST">
+        <label for="bill">Enter your total bill ($): </label>
+        <input type="text" id="bill" name="bill" />
+        <br />
+        <br />
+        <label for="size">Enter the size: </label>
+        <input type="text" id="size" name="size" />
+        <br />
+        <br />
+        <label for="gender">Select your gender: </label><br />
+        <input type="radio" id="female" name="gender" value="1" />
+        <label for="female">Female</label><br />
+        <input type="radio" id="male" name="gender" value="0" />
+        <label for="male">Male</label>
+        <br />
+        <br />
+        <label for="df">Enter 1 if dinner, enter 0 if lunch: </label><br />
+        <input type="radio" id="Lunch" name="df" value="1" />
+        <label for="female">Lunch</label><br />
+        <input type="radio" id="Dinner" name="df" value="0" />
+        <label for="male">Dinner</label>
+        <br />
+        <br />
+        <label for="day">Select the Day: </label><br />
+        <input type="radio" id="Sunday" name="day" value="0" />
+        <label for="Sunday">Sunday</label><br />
+        <input type="radio" id="Thursday" name="day" value="1" />
+        <label for="Thursday">Thursday</label><br />
+        <input type="radio" id="Friday" name="day" value="2" />
+        <label for="Friday">Friday</label><br />
+        <input type="radio" id="Saturday" name="day" value="3" />
+        <label for="Saturday">Saturday</label>
+        <br />
+        <br />
+        <input type="submit" />
+        <hr />
+      </form>
+    </div>
+  </body>
+</html>
